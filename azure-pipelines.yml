@@ -16,6 +16,10 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+- task: NodeTool@0
+  inputs:
+    versionSource: 'spec'
+    versionSpec: '6.x'
     npm install
     npm run build
   displayName: 'npm install and build'
